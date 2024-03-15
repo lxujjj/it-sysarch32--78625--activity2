@@ -1,3 +1,4 @@
+
   ul {
     list-style-type: none;
     margin: 0;
@@ -28,42 +29,45 @@
   .card:hover {
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
   }
-  
-  .container {
-    padding: 2px 16px;
-  }
-  img {
-    border-radius: 50%;
-    max-width: 40%;
-    height:auto;
-    margin-top: 20px;
-  }
-  .column {
-    float:left;
-    width: 30%;
-    padding: 0 10px;
-    background-color:beige;
-    margin-top: 20px;
-    margin-right: 20px;
-
+  .row {
+    display: flex;
+    justify-content: space-around;
   }
   
-  /* Remove extra left and right margins, due to padding */
-  .row {margin: 0 -5px;}
-  
-  /* Clear floats after the columns */
-  .row:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
-  
-  /* Responsive columns */
-  @media screen and (max-width: 600px) {
-    .column {
-      width: 100%;
-      display: block;
-      margin-bottom: 20px;
+  @media (max-width: 768px) {
+    .row {
+      flex-direction: column;
     }
   }
+
+  .student-name {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  
+  .card {
+    margin-top: 25px;
+    max-width: 250px;
+    max-height: 350px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    text-align: center;
+    margin-right: 15px;
+    margin-bottom: 15px;
+  }
+  
+  .card img {
+    width: auto;
+    max-height: 70%;
+    border-radius: 5%;
+    margin-bottom: 20px;
+  }
+  
+  .card:last-child {
+    margin-right: auto;
+  }
+  
+  
 
